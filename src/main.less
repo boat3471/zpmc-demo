@@ -1,0 +1,23 @@
+@import "features/common/components/Header";
+
+.app-body {
+    min-height: 100%;
+
+    .main-body {
+        & > .ant-layout {
+            min-height: 100vh;
+        }
+
+        .ant-layout {
+            background: #fff;
+
+            .ant-layout-sider {
+                background: none;
+            }
+        }
+
+        .ant-layout-content {
+            padding: 20px;
+        }
+    }
+}
