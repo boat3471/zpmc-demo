@@ -10,3 +10,5 @@ npm install
 npm start 
 ```
 
+### 截图演示
+![npm-install-vue-cli](./doc/demonstration.png)
