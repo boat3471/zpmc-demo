@@ -14,5 +14,9 @@ npm start
 
 ![npm-install-vue-cli](./doc/src-diagraming.jpg)
 
+### 演示地址
+https://intro.xinwenchao.com/zpmc.html#/
+
+
 ### 截图演示
 ![npm-install-vue-cli](./doc/demonstration.png)
