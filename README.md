@@ -10,5 +10,9 @@ npm install
 npm start 
 ```
 
+### 开发目录（src）结构图
+
+![npm-install-vue-cli](./doc/src-diagraming.jpg)
+
 ### 截图演示
 ![npm-install-vue-cli](./doc/demonstration.png)
