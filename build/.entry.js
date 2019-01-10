@@ -1,18 +1,18 @@
 const path = require('path');
-const entry = require('../src/entry');
+const pageEntry = require('./.entry.pages');
 const devEntry = require('./.entry.dev');
 
-Object.keys(entry).forEach((key) => {
-    let singleEntry = entry[key];
+Object.keys(pageEntry).forEach((key) => {
+    let singleEntry = pageEntry[key];
     if (!Array.isArray(singleEntry)) {
         singleEntry = [singleEntry];
     }
-    entry[key] = [
+    pageEntry[key] = [
         ...devEntry,
         ...singleEntry,
     ];
 });
 
 module.exports = {
-    ...entry,
+    ...pageEntry,
 };

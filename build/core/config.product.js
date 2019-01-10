@@ -21,11 +21,12 @@ const common = [
     'redux',
     'redux-saga',
     'whatwg-fetch',
+    '@babel/polyfill'
 ];
 
 module.exports = merge(base, {
     env: 'production',
-    publicPath: '/dist/static',
+    publicPath: '/static/',
     publicRootPath: path.join(appPath, 'dist'),
     output: {
         staticPath: path.join(appPath, 'dist', 'static'),

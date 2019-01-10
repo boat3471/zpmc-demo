@@ -6,7 +6,7 @@ const { output } = require('./build.config');
 
 const templatePath = path.join(buildPath, 'template', 'index.ejs');
 
-const entries = require('../src/entry');
+const entries = require('./.entry.pages');
 
 const htmlList = [];
 Object.keys(entries).forEach((chunkName) => {

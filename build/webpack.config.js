@@ -124,7 +124,12 @@ module.exports = {
         alias: alias,
     },
     plugins: [
-        new CleanWebpackPlugin(config.publicRootPath, { watch: true }),
+        new CleanWebpackPlugin(['dist'], {
+            root: appPath,
+            verbose: true,
+            allowExternal: true,
+            watch: true,
+        }),
         new MiniCssExtractPlugin({
             filename: config.output.filename + '.css',
             chunkFilename: config.output.chunkFilename + '.css',
