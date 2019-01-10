@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { todoAddItem, fetchAddItem, fetchSearchList } from '../store/todo.actions';
+import { todoAddItem, todoAddItemFetch, todoSearchListFetch } from '../store/todo.actions';
 import View from './AddTodoView';
 
 const mapStateToProps = () => {
@@ -13,11 +13,11 @@ const mapDispatchToProps = (dispatch) => {
             input.value = '';
         },
         addItemSubmitAsync(e, input) {
-            dispatch(fetchAddItem(input.value));
+            dispatch(todoAddItemFetch(input.value));
             input.value = '';
         },
         search(e, input) {
-            dispatch(fetchSearchList(input.value));
+            dispatch(todoSearchListFetch(input.value));
             input.value = '';
         },
     };

@@ -8,7 +8,7 @@ import { reducer as todoShowLoading } from './todoShowLoading';
 
 import initialState from './initialState';
 
-import { fetchLoadList } from './fetchLoadList';
+import { todoLoadListFetch } from './todoLoadListFetch';
 
 
 const reducers = [
@@ -36,5 +36,5 @@ export function reducer(state = initialState, action) {
 
 export function todoNotification(store) {
     _store = store;
-    store.dispatch(fetchLoadList());
+    store.dispatch(todoLoadListFetch());
 }

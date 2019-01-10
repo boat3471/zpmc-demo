@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import View from './MainView';
+import View from './TodoPage';
 
 const mapStateToProps = (state) => {
     const todo = state.todo;

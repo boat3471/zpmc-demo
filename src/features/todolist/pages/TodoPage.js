@@ -1,13 +1,13 @@
 import React from 'react';
-import TodoNav from './TodoNav';
-import AddTodo from './AddTodo';
-import TodoList from './TodoList';
-import TodoPagination from './TodoPagination';
+import TodoNav from './../compontents/TodoNav';
+import AddTodo from './../compontents/AddTodo';
+import TodoList from './../compontents/TodoList';
+import TodoPagination from './../compontents/TodoPagination';
 import { Spin } from 'antd';
 
-import './MianView.less';
+import './TodoPage.less';
 
-const MainView = ({ loading, loadingTip }) => {
+const TodoPage = ({ loading, loadingTip }) => {
     return (
         <Spin tip={loadingTip || '加载中。。。'} delay={100} spinning={loading}>
             <div className="todo-list-main">
@@ -20,4 +20,4 @@ const MainView = ({ loading, loadingTip }) => {
     );
 };
 
-export default MainView;
+export default TodoPage;

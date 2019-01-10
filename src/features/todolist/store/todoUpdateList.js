@@ -1,4 +1,4 @@
-import { UPDATE_LIST } from './constants';
+import { TODO_UPDATE_LIST } from './constants';
 import { filterTodo } from './common';
 
 /**
@@ -6,14 +6,14 @@ import { filterTodo } from './common';
  */
 export function todoUpdateList(data = {}) {
     return {
-        type: UPDATE_LIST,
+        type: TODO_UPDATE_LIST,
         ...data,
     };
 }
 
 export function reducer(state, action) {
     switch (action.type) {
-        case UPDATE_LIST: {
+        case TODO_UPDATE_LIST: {
             const mockList = action.mockList || state.mockList;
             const key = action.key;
             let newList = filterTodo(mockList, state.filterType, key);

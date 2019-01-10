@@ -1,5 +1,5 @@
 import { put, call, takeEvery } from 'redux-saga/effects';
-import { TODO_ADD_ITEM_ASYNC } from './constants';
+import { TODO_FETCH_ADD_ITEM } from './constants';
 import { ajaxAddItem } from '-apis/todolist';
 import { todoAddItem } from './todoAddItem';
 import { todoUpdateList } from './todoUpdateList';
@@ -10,9 +10,9 @@ import { todoShowLoading } from '-src/features/todolist/store/todoShowLoading';
  * @param name
  * @returns {*}
  */
-export function fetchAddItem(name) {
+export function todoAddItemFetch(name) {
     return {
-        type: TODO_ADD_ITEM_ASYNC,
+        type: TODO_FETCH_ADD_ITEM,
         name: name,
     };
 }
@@ -26,5 +26,5 @@ function* worker(action) {
 }
 
 export function* watchAddItem() {
-    yield takeEvery(TODO_ADD_ITEM_ASYNC, worker);
+    yield takeEvery(TODO_FETCH_ADD_ITEM, worker);
 }

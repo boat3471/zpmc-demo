@@ -1,6 +1,6 @@
 export default {
-    path: 'todo-list',
-    name: 'TodoList',
+    path: 'todo',
+    name: '',
     component: '',
     children: [
         { path: 'detail', name: 'TodoDetail', component: '' },

@@ -33,7 +33,7 @@ const menuList = [
         type: 'menu',
         key: 'm3',
         children: [
-            { title: '待办事项', type: 'item', key: '/security' },
+            { title: '安全设置', type: 'item', key: '/security' },
             { title: '基本资料', type: 'item', key: '/base' },
             { title: '系统消息', type: 'item', key: '/message' },
         ],

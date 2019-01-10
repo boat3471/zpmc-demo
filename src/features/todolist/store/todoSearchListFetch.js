@@ -1,14 +1,14 @@
 import { put, call, takeEvery } from 'redux-saga/effects';
-import { TODO_SEARCH_LIST } from './constants';
+import { TODO_FETCH_SEARCH_LIST } from './constants';
 import { todoShowLoading, todoUpdateList } from './todo.actions';
 import { ajaxSearch } from '-apis/todolist';
 
 /**
  * 查询
  */
-export function fetchSearchList(key) {
+export function todoSearchListFetch(key) {
     return {
-        type: TODO_SEARCH_LIST,
+        type: TODO_FETCH_SEARCH_LIST,
         key,
     };
 }
@@ -21,5 +21,5 @@ function* worker(action) {
 }
 
 export function* watchSearchList() {
-    yield takeEvery(TODO_SEARCH_LIST, worker);
+    yield takeEvery(TODO_FETCH_SEARCH_LIST, worker);
 }

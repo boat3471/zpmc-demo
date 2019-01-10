@@ -5,7 +5,7 @@ export default class Welcome extends React.Component {
     render() {
         return (
             <div className="welcome-page">
-                欢迎进入演示管理系统4
+                欢迎进入演示管理系统
             </div>
         );
     }

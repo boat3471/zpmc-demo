@@ -1,4 +1,14 @@
-export { default as MainTodoList } from './app';
+import React from 'react';
+import TodoLoadable from './pages/TodoLoadable.js';
 
-export { default as AddTodo } from './compontents/AddTodo';
-export { default as TodoList } from './compontents/TodoList';
+// 动态打包
+export class Todo extends React.Component {
+    render() {
+        return (
+            <TodoLoadable />
+        );
+    }
+}
+
+// 合并打包
+// export { default as Todo } from './pages/Todo';

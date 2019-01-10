@@ -1,18 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import history from '-history';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { Router, Route, Switch, Redirect } from 'react-router-dom';
 import { Layout } from 'antd';
+import { generateStore } from './features-store';
+
 import { Menus, Header, PageNotFound } from './features/common';
 import { Welcome } from './features/home';
-import { MainTodoList } from './features/todolist';
-import history from '-history';
+import { Todo } from './features/todolist';
 
-import './main.less';
-
-
-import { generateStore } from './store';
+import './styles/main.less';
 
 const store = generateStore();
 
@@ -28,7 +27,7 @@ const RouterView = () => {
                     <Layout.Content>
                         <Switch>
                             <Route path="/" exact component={Welcome} />
-                            <Route path="/todo" component={MainTodoList} />
+                            <Route path="/todo" component={Todo} />
                             <Route path="/not-found" component={PageNotFound} />
                             <Redirect to="/not-found" />
                         </Switch>
